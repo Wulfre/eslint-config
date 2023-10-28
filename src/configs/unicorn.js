@@ -1,5 +1,6 @@
 import { renameConfigRules } from "../utils.js"
 import { unicornPlugin } from "../plugins.js"
+import { astroGlob, jsxGlob } from "../globs.js"
 
 const unicornPrefix = "unicorn"
 
@@ -15,6 +16,12 @@ export const unicornConfig = [
             [`${unicornPrefix}/no-await-expression-member`]: ["off"],
 
             [`${unicornPrefix}/prefer-at`]: ["error", { checkAllIndexAccess: true }],
+        },
+    },
+    {
+        files: [jsxGlob, astroGlob],
+        rules: {
+            [`${unicornPrefix}/filename-case`]: ["error", { case: "pascalCase", ignore: ["index.*"] }],
         },
     },
 ]
