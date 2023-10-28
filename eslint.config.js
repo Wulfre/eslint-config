@@ -9,8 +9,10 @@ import { unocssConfig } from "./src/configs/unocss.js"
 import { preactConfig } from "./src/configs/preact.js"
 import { eslintCommentsConfig } from "./src/configs/eslint-comments.js"
 import { importConfig } from "./src/configs/imports.js"
+import { ignoresConfig } from "./src/configs/ignores.js"
 
 export default [
+    ...ignoresConfig,
     ...onlyWarnConfig,
     ...eslintCommentsConfig,
     ...stylisticConfig,
