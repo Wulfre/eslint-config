@@ -15,7 +15,6 @@ export const typescriptConfig = hasTypescript
                 parser: typescriptParser,
                 parserOptions: {
                     project: hasTypescript,
-                    sourceType: "module",
                 },
             },
             rules: {

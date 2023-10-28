@@ -8,11 +8,13 @@ import { unicornConfig } from "./src/configs/unicorn.js"
 import { unocssConfig } from "./src/configs/unocss.js"
 import { preactConfig } from "./src/configs/preact.js"
 import { eslintCommentsConfig } from "./src/configs/eslint-comments.js"
+import { importConfig } from "./src/configs/imports.js"
 
 export default [
     ...onlyWarnConfig,
     ...eslintCommentsConfig,
     ...stylisticConfig,
+    ...importConfig,
     ...javascriptConfig,
     ...typescriptConfig,
     ...astroConfig,
