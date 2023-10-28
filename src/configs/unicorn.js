@@ -16,6 +16,7 @@ export const unicornConfig = [
             [`${unicornPrefix}/no-await-expression-member`]: ["off"],
             [`${unicornPrefix}/no-array-for-each`]: ["off"],
             [`${unicornPrefix}/no-array-reduce`]: ["off"],
+            [`${unicornPrefix}/no-useless-undefined`]: ["off"],
 
             [`${unicornPrefix}/prefer-at`]: ["error", { checkAllIndexAccess: true }],
         },
