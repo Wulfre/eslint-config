@@ -1,12 +1,23 @@
 {
     "name": "@wulfre/eslint-config",
+    "author": "wulfre",
+    "description": "Wulfre's eslint config",
     "version": "0.1.0",
+    "license": "MIT",
+    "keywords": [
+        "eslint",
+        "eslint-config"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Wulfre/eslint-config.git"
+    },
+    "main": "eslint.config.js",
     "type": "module",
     "scripts": {
         "view": "eslint-flat-config-viewer",
         "lint": "eslint ."
     },
-    "main": "eslint.config.js",
     "dependencies": {
         "@eslint/js": "^8.52.0",
         "@stylistic/eslint-plugin": "^0.1.1",
