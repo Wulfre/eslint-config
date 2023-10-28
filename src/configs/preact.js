@@ -23,9 +23,9 @@ export const preactConfig = [
             ...renameConfigRules(reactHooksPlugin.configs.recommended.rules, `${preactPrefix}-hooks`),
 
             [`${preactPrefix}/react-in-jsx-scope`]: ["off"],
+            [`${preactPrefix}/display-name`]: ["off"],
 
             [`${preactPrefix}/no-deprecated`]: ["error"],
-            [`${preactPrefix}/display-name`]: ["warn", { ignoreTranspilerName: false }],
             [`${preactPrefix}/jsx-no-bind`]: ["warn", {
                 ignoreRefs: true,
                 allowFunctions: true,
