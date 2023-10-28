@@ -14,6 +14,8 @@ export const unicornConfig = [
 
             [`${unicornPrefix}/prevent-abbreviations`]: ["off"],
             [`${unicornPrefix}/no-await-expression-member`]: ["off"],
+            [`${unicornPrefix}/no-array-for-each`]: ["off"],
+            [`${unicornPrefix}/no-array-reduce`]: ["off"],
 
             [`${unicornPrefix}/prefer-at`]: ["error", { checkAllIndexAccess: true }],
         },
