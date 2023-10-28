@@ -19,7 +19,7 @@ export const preactConfig = [
             [`${preactPrefix}-jsx-a11y`]: jsxA11yPlugin,
         },
         rules: {
-            ...renameConfigRules(jsxA11yPlugin.configs.strict.rules, `${preactPrefix}-jsx-a11y`),
+            ...renameConfigRules(jsxA11yPlugin.configs.recommended.rules, `${preactPrefix}-jsx-a11y`),
             ...renameConfigRules(reactHooksPlugin.configs.recommended.rules, `${preactPrefix}-hooks`),
 
             [`${preactPrefix}/react-in-jsx-scope`]: ["off"],

@@ -19,7 +19,7 @@ export const astroConfig = [
         },
         rules: {
             ...renameConfigRules(astroPlugin.configs.recommended.rules, astroPrefix),
-            ...renameConfigRules(astroPlugin.configs["jsx-a11y-strict"].rules, astroPrefix),
+            ...renameConfigRules(astroPlugin.configs["jsx-a11y-recommended"].rules, astroPrefix),
 
             [`${astroPrefix}/semi`]: ["error", "never"],
         },
