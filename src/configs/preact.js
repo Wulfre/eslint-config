@@ -15,12 +15,12 @@ export const preactConfig = [
         },
         plugins: {
             [preactPrefix]: reactPlugin,
-            [`${preactPrefix}/hooks`]: reactHooksPlugin,
-            [`${preactPrefix}/jsx-a11y`]: jsxA11yPlugin,
+            [`${preactPrefix}-hooks`]: reactHooksPlugin,
+            [`${preactPrefix}-jsx-a11y`]: jsxA11yPlugin,
         },
         rules: {
-            ...renameConfigRules(jsxA11yPlugin.configs.strict.rules, `${preactPrefix}/jsx-a11y`),
-            ...renameConfigRules(reactHooksPlugin.configs.recommended.rules, `${preactPrefix}/hooks`),
+            ...renameConfigRules(jsxA11yPlugin.configs.strict.rules, `${preactPrefix}-jsx-a11y`),
+            ...renameConfigRules(reactHooksPlugin.configs.recommended.rules, `${preactPrefix}-hooks`),
 
             [`${preactPrefix}/react-in-jsx-scope`]: ["off"],
 
