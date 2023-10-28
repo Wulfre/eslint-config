@@ -10,7 +10,7 @@ export const stylisticConfig = [
             [stylisticPrefix]: stylisticPlugin,
         },
         rules: {
-            curly: ["error", "multi-or-nest", "consistent"],
+            curly: ["error", "all"],
 
             [`${stylisticPrefix}/array-bracket-spacing`]: ["error", "never"],
             [`${stylisticPrefix}/arrow-spacing`]: ["error", { after: true, before: true }],
