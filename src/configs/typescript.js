@@ -4,24 +4,26 @@ import { typescriptPlugin, typescriptParser } from "../plugins.js"
 
 const typescriptPrefix = "ts"
 
-export const typescriptConfig = [
-    {
-        files: [tsGlob, astroGlob],
-        plugins: {
-            [typescriptPrefix]: typescriptPlugin,
-        },
-        languageOptions: {
-            parser: typescriptParser,
-            parserOptions: {
-                project: hasTypescript,
-                sourceType: "module",
+export const typescriptConfig = hasTypescript
+    ? [
+        {
+            files: [tsGlob, astroGlob],
+            plugins: {
+                [typescriptPrefix]: typescriptPlugin,
+            },
+            languageOptions: {
+                parser: typescriptParser,
+                parserOptions: {
+                    project: hasTypescript,
+                    sourceType: "module",
+                },
+            },
+            rules: {
+                ...renameConfigRules(typescriptPlugin.configs["strict-type-checked"].rules, typescriptPrefix),
+                ...renameConfigRules(typescriptPlugin.configs["stylistic-type-checked"].rules, typescriptPrefix),
+
+                [`${typescriptPrefix}/consistent-type-definitions`]: ["error", "type"],
             },
         },
-        rules: {
-            ...renameConfigRules(typescriptPlugin.configs["strict-type-checked"].rules, typescriptPrefix),
-            ...renameConfigRules(typescriptPlugin.configs["stylistic-type-checked"].rules, typescriptPrefix),
-
-            [`${typescriptPrefix}/consistent-type-definitions`]: ["error", "type"],
-        },
-    },
-]
+    ]
+    : []
