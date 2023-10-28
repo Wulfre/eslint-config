@@ -1,4 +1,4 @@
-import { astroGlob, jsxGlob } from "../globs.js"
+import { astroGlob, jsxGlob, tsxGlob } from "../globs.js"
 import { stylisticPlugin } from "../plugins.js"
 
 const stylisticPrefix = "style"
@@ -79,7 +79,7 @@ export const stylisticConfig = [
         },
     },
     {
-        files: [jsxGlob, astroGlob],
+        files: [jsxGlob, tsxGlob, astroGlob],
         rules: {
             [`${stylisticPrefix}/jsx-closing-bracket-location`]: ["error"],
             [`${stylisticPrefix}/jsx-closing-tag-location`]: ["error"],

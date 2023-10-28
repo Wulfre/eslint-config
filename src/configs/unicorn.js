@@ -1,6 +1,6 @@
 import { renameConfigRules } from "../utils.js"
 import { unicornPlugin } from "../plugins.js"
-import { astroGlob, jsxGlob } from "../globs.js"
+import { astroGlob, jsxGlob, tsxGlob } from "../globs.js"
 
 const unicornPrefix = "unicorn"
 
@@ -22,7 +22,7 @@ export const unicornConfig = [
         },
     },
     {
-        files: [jsxGlob, astroGlob],
+        files: [jsxGlob, tsxGlob, astroGlob],
         rules: {
             [`${unicornPrefix}/filename-case`]: ["error", { case: "pascalCase", ignore: ["index.*"] }],
         },

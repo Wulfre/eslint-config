@@ -1,4 +1,4 @@
-import { jsxGlob } from "../globs.js"
+import { jsxGlob, tsxGlob } from "../globs.js"
 import { reactPlugin, reactHooksPlugin, jsxA11yPlugin } from "../plugins.js"
 import { renameConfigRules } from "../utils.js"
 
@@ -6,7 +6,7 @@ const preactPrefix = "preact"
 
 export const preactConfig = [
     {
-        files: [jsxGlob],
+        files: [jsxGlob, tsxGlob],
         settings: {
             react: {
                 pragma: "h",

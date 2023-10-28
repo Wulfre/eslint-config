@@ -1,5 +1,5 @@
 import { renameConfigRules, hasTypescript } from "../utils.js"
-import { astroGlob, tsGlob } from "../globs.js"
+import { astroGlob, tsxGlob, tsGlob } from "../globs.js"
 import { typescriptPlugin, typescriptParser } from "../plugins.js"
 
 const typescriptPrefix = "ts"
@@ -22,6 +22,12 @@ export const typescriptConfig = hasTypescript
                 ...renameConfigRules(typescriptPlugin.configs["stylistic-type-checked"].rules, typescriptPrefix),
 
                 [`${typescriptPrefix}/consistent-type-definitions`]: ["error", "type"],
+            },
+        },
+        {
+            files: [tsxGlob],
+            rules: {
+                [`${typescriptPrefix}/no-unnecessary-type-constraint`]: ["off"],
             },
         },
     ]
