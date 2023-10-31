@@ -12,12 +12,14 @@
         "javascriptreact",
         "typescript",
         "typescriptreact",
-        "astro"
+        "astro",
+        "json",
+        "jsonc"
     ],
 
     // autofix
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": "explicit",
         "source.organizeImports": "never"
-    },
+    }
 }
