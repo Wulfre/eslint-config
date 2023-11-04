@@ -73,6 +73,9 @@ devDependencies:
   eslint-flat-config-viewer:
     specifier: ^0.1.0
     version: 0.1.0
+  eslint-plugin-antfu:
+    specifier: ^1.0.2
+    version: 1.0.2(eslint@8.53.0)
 
 packages:
 
@@ -1025,6 +1028,14 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: false
+
+  /eslint-plugin-antfu@1.0.2(eslint@8.53.0):
+    resolution: {integrity: sha512-elv/LVq+4h9oi7xza9EK93akujmTAGnL3e7aMVVWELjvIJuHcKj0GT6HjdgPDtuBdMnyyKN7fVKIpSNSqZnaIA==}
+    peerDependencies:
+      eslint: '*'
+    dependencies:
+      eslint: 8.53.0
+    dev: true
 
   /eslint-plugin-astro@0.29.1(eslint@8.53.0):
     resolution: {integrity: sha512-ffuUc7zFz8HavaAVaS5iRUzWqBf3/YbrFWUhx0GxXW3gVtnbri5UyvkN8EMOkZWkNXG1zqD2y9dlEsAezhbC0w==}

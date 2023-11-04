@@ -11,6 +11,7 @@ import { eslintCommentsConfig } from "./src/configs/eslint-comments.js"
 import { importConfig } from "./src/configs/imports.js"
 import { ignoresConfig } from "./src/configs/ignores.js"
 import { jsonConfig } from "./src/configs/json.js"
+import { antfuConfig } from "./src/configs/antfu.js"
 
 export default [
     ...ignoresConfig,
@@ -25,5 +26,6 @@ export default [
     ...unocssConfig,
     ...unicornConfig,
     ...sonarConfig,
+    ...antfuConfig,
     ...jsonConfig,
 ]
